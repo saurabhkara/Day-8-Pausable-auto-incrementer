@@ -2,10 +2,9 @@ console.log("working");
 
 function autoIncrementer(intialValue = 0, steps = 10) {
   let value = intialValue;
-  let flag = null;
   let setIntervalId;
   const increment = () => {
-    if (flag === null) {
+    if (setIntervalId === null) {
       setIntervalId = setInterval(() => {
         value += steps;
         console.log(value);
